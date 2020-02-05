@@ -7,14 +7,40 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+   isloged :Boolean = false;
 
 
-
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+    let status = localStorage.getItem('isloged')
+    
+    if(status==="true"){
+      this.isloged = true
+    }else{
+      this.isloged = false
+    }
+    
+   }
   calendar(){
     this.router.navigate(['/kitchen-sink']); 
 }
+inscrire(){
+  this.router.navigate(['/inscrire']);
+}
+resultat(){
+  this.router.navigate(['/resultat']);
+}
+afficheResu(){
+  this.router.navigate(['/afficheResultat'])
+}
+login(){
+  this.router.navigate(['/login']);
+}
   ngOnInit() {
+  }
+  logout(){
+    this.isloged=false
+    localStorage.setItem('isloged',"false")
+    
   }
 
 

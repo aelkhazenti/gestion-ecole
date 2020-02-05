@@ -2,11 +2,16 @@ import {
   Component,
   ChangeDetectionStrategy,
   ViewChild,
-  TemplateRef
+  ElementRef ,
+  TemplateRef,
+  ContentChild
 } from '@angular/core';
+
+import { Router } from '@angular/router';
+
 import {
   startOfDay,
-  endOfDay,
+  endOfDay, 
   subDays,
   addDays,
   endOfMonth,
@@ -15,13 +20,29 @@ import {
   addHours
 } from 'date-fns';
 import { Subject } from 'rxjs';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, NgbDropdownItem } from '@ng-bootstrap/ng-bootstrap';
 import {
   CalendarEvent,
   CalendarEventAction,
   CalendarEventTimesChangedEvent,
   CalendarView
 } from 'angular-calendar';
+
+declare const make_capture: any;
+declare const html2canvas: any;
+declare const fireb_app: any;
+declare const fireb_storage: any;
+declare const fireb_auth: any;
+declare const fireb_data: any;
+declare const sweet_alert: any;
+declare const alert_field: any;
+
+
+
+
+
+
+
 
 const colors: any = {
   red: {
@@ -45,6 +66,52 @@ const colors: any = {
   templateUrl: 'template.html'
 })
 export class DemoComponent {
+  
+  isloged :Boolean = false;
+  
+  
+
+  constructor(private modal: NgbModal,private router: Router) {
+
+    let status = localStorage.getItem('isloged')
+    
+    if(status==="true"){
+      this.isloged = true
+    }else{
+      this.isloged = false
+    }
+
+
+
+  }
+  
+  
+  calendar(){
+    this.router.navigate(['/kitchen-sink']); 
+}
+inscrire(){
+  this.router.navigate(['/inscrire']);
+}
+
+resultat(){
+  this.router.navigate(['/resultat']);
+}
+login(){
+  this.router.navigate(['/login']);
+}
+afficheResu(){
+  this.router.navigate(['/afficheResultat'])
+}
+
+
+
+  logout(){
+    this.isloged=false
+    localStorage.setItem('isloged',"false")
+    
+  }
+  
+
   @ViewChild('modalContent', { static: true }) modalContent: TemplateRef<any>;
 
   view: CalendarView = CalendarView.Month;
@@ -79,49 +146,41 @@ export class DemoComponent {
   refresh: Subject<any> = new Subject();
 
   events: CalendarEvent[] = [
-    {
-      start: subDays(startOfDay(new Date()), 1),
-      end: addDays(new Date(), 1),
-      title: 'A 3 day event',
-      color: colors.red,
-      actions: this.actions,
-      allDay: true,
-      resizable: {
-        beforeStart: true,
-        afterEnd: true
-      },
-      draggable: true
-    },
-    {
-      start: startOfDay(new Date()),
-      title: 'An event with no end date',
-      color: colors.yellow,
-      actions: this.actions
-    },
-    {
-      start: subDays(endOfMonth(new Date()), 3),
-      end: addDays(endOfMonth(new Date()), 3),
-      title: 'A long event that spans 2 months',
-      color: colors.blue,
-      allDay: true
-    },
-    {
-      start: addHours(startOfDay(new Date()), 2),
-      end: addHours(new Date(), 2),
-      title: 'A draggable and resizable event',
-      color: colors.yellow,
-      actions: this.actions,
-      resizable: {
-        beforeStart: true,
-        afterEnd: true
-      },
-      draggable: true
-    }
+   
   ];
 
   activeDayIsOpen: boolean = true;
+  field : string;
+  s : string;
 
-  constructor(private modal: NgbModal) {}
+  setfield(x:string){this.field=x; 
+    this.nActivate(Event);   }       
+  setS(y:string){this.s=y; 
+    this.nActivate(Event);   }  
+  
+  
+  nActivate(event) {
+    window.scroll(0,0);
+    //or document.body.scrollTop = 0;
+    //or document.querySelector('body').scrollTo(0,0)
+    
+}
+
+   save() {
+    if(this.field==null||this.s==null){
+      sweet_alert();
+      alert_field();}
+      
+    else{html2canvas();
+        fireb_app();
+        fireb_auth();
+        fireb_storage(); 
+        fireb_data();
+        sweet_alert();
+        make_capture(this.field,this.s);
+      } 
+     }
+    
 
   dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {
     if (isSameMonth(date, this.viewDate)) {
@@ -176,7 +235,15 @@ export class DemoComponent {
       }
     ];
   }
+  
+ 
+ 
 
+
+
+
+
+  
   deleteEvent(eventToDelete: CalendarEvent) {
     this.events = this.events.filter(event => event !== eventToDelete);
   }
@@ -188,4 +255,7 @@ export class DemoComponent {
   closeOpenMonthViewDay() {
     this.activeDayIsOpen = false;
   }
+
+
+ 
 }
