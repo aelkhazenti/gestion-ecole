@@ -36,10 +36,11 @@ import { AfficheResultComponent } from './affiche-result/affiche-result.componen
 import { ConnecterComponent } from './connecter/connecter.component';
 import { AfficheetudComponent } from './afficheetud/afficheetud.component';
 import { InscrireComponent } from './inscrire/inscrire.component';
+import { FormationComponent } from './formation/formation.component';
 
 
 @NgModule({
-  declarations: [DemoAppComponent, InscrireComponent, NavbarComponent, AfficheResultComponent, ConnecterComponent, AfficheetudComponent,],
+  declarations: [DemoAppComponent, InscrireComponent, NavbarComponent, AfficheResultComponent, ConnecterComponent, AfficheetudComponent, FormationComponent,],
   imports: [
    
     BrowserModule,
