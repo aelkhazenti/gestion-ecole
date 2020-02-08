@@ -5,7 +5,12 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/css/uikit.min.css" />
 
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit-icons.min.js"></script>
 <style>
 
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
@@ -26,6 +31,7 @@ body, html {
 .w3-bar .w3-button {
   padding: 16px;
 }
+
 </style>
 <body>
 
@@ -36,9 +42,8 @@ body, html {
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
       <a href="" class="w3-bar-item w3-button"><i class="fa fa-home" aria-hidden="true"></i> accueil</a>
-      <a href="" class="w3-bar-item w3-button"><i class="fa fa-bandcamp"></i>  afficher calendrier  </a>
+      <a (click)="afficheFormation()" class="w3-bar-item w3-button"><i class="fa fa-bandcamp"></i>  afficher calendrier  </a>
       <a *ngIf="isloged" (click)="calendar()" class="w3-bar-item w3-button"><i class="fa fa-bandcamp"></i> calendrier </a>
-
      <a *ngIf="isloged" (click)="resultat()" class="w3-bar-item w3-button" ><i class="fa fa-eye" aria-hidden="true"  ></i> afficher les resultats</a> 
      <a *ngIf="!isloged" (click)="afficheResu()" class="w3-bar-item w3-button" ><i class="fa fa-eye" aria-hidden="true"  ></i> afficher les resultats</a> 
       <a (click)="inscrire()" class="w3-bar-item w3-button"><i class="fa fa-usd"  ></i> S'inscrire</a>
@@ -169,7 +174,7 @@ body, html {
           <h3>M. Saidi  </h3>
           <p class="w3-opacity">M. Saidi</p>
           <p>test test</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+          <p><button class="w3-button w3-light-grey w3-block" mat-raised-button matTooltip="helloworld" ><i class="fa fa-envelope"></i> Contact</button></p>
         </div>
       </div>
     </div>
@@ -180,6 +185,7 @@ body, html {
           <h3>M. baddi</h3>
           <p class="w3-opacity">M. baddi</p>
           <p>test</p>
+        
           <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
         </div>
       </div>
@@ -191,74 +197,13 @@ body, html {
           <h3>M. Toumi</h3>
           <p class="w3-opacity">M. Toumi</p>
           <p>test test</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+          <p><button class="w3-button w3-light-grey w3-block" uk-tooltip="title: Hello World; pos: bottom" ><i class="fa fa-envelope"></i> Contact</button></p>
+          
         </div>
       </div>
     </div>
   </div>
 </div>
-
-<!-- Promo Section "Statistics" -->
-
-
-<!--<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">-->
-
-
-<!--  <div class="w3-quarter">-->
-
-
-<!--    <span class="w3-xxlarge">14+</span>-->
-<!--    <br>Partners-->
-<!--  </div>-->
-<!--  <div class="w3-quarter">-->
-<!--    <span class="w3-xxlarge">55+</span>-->
-<!--    <br>Projects Done-->
-<!--  </div>-->
-<!--  <div class="w3-quarter">-->
-<!--    <span class="w3-xxlarge">89+</span>-->
-<!--    <br>Happy Clients-->
-<!--  </div>-->
-<!--  <div class="w3-quarter">-->
-<!--    <span class="w3-xxlarge">150+</span>-->
-<!--    <br>Meetings-->
-<!--  </div>-->
-<!--</div>-->
-
-<!-- Work Section
-<div class="w3-container" style="padding:128px 16px" id="work">
-  <h3 class="w3-center">OUR WORK</h3>
-  <p class="w3-center w3-large">What we've done for people</p>
-
-  <div class="w3-row-padding" style="margin-top:64px">
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_mic.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A microphone">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_phone.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A phone">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_drone.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A drone">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_sound.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Soundbox">
-    </div>
-  </div>
-
-  <div class="w3-row-padding w3-section">
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_tablet.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tablet">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_camera.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A camera">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_typewriter.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A typewriter">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_tableturner.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tableturner">
-    </div>
-  </div>
-</div> -->
 
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
@@ -298,17 +243,10 @@ body, html {
 
 
 <!-- Pricing Section -->
-<div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px" id="pricing">
-  <h3>PRICING</h3>
-  <p class="w3-large">Choose a pricing plan that fits your needs.</p>
-
-</div>
-
-<!-- Contact Section -->
-<div class="w3-container w3-light-grey" style="padding:80px 6px" id="contact">
-  <h3 class="w3-center">CONTACT</h3>
-  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
-  <div style="margin-top:48px">
+<div class="w3-container w3-center w3-dark-grey" style="padding:45px 16px" id="pricing">
+  <h3 class="w3-center">contactez nous</h3>
+  <p class="w3-center w3-large">Permet d'entrer en contact. Envoie-nous un message</p>
+  <div style="margin-top:8px">
     <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> El Jadida</p>
     <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +212 .......</p>
     <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
@@ -317,13 +255,17 @@ body, html {
   </div>
 </div>
 
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:2px" id="contact">
+
+</div>
+
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64">
-  <a href="/home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  
   <div class="w3-xlarge w3-section">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
+  
     <i class="fa fa-pinterest-p w3-hover-opacity"></i>
     <i class="fa fa-twitter w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>

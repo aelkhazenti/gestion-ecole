@@ -5,15 +5,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   NgbTabsetModule,
   NgbCollapseModule,
-  NgbTooltipModule
+  NgbTooltipModule,NgbTooltip
 } from '@ng-bootstrap/ng-bootstrap';
 import { Angulartics2Module } from 'angulartics2';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { DragAndDropModule } from 'angular-draggable-droppable';
 import { DemoAppComponent } from './demo-app.component';
 
-import { HomeComponent  } from './home/home.component';
-import { HomeModule } from './home/home.module';
+
 
 import { DemoComponent as DefaultDemoComponent } from './demo-modules/kitchen-sink/component';
 import { DemoModule as DefaultDemoModule } from './demo-modules/kitchen-sink/module';
@@ -24,12 +23,15 @@ import { ClipboardModule } from 'ngx-clipboard';
 
 import { AngularFireModule } from '@angular/fire';
 
+import { MatNativeDateModule } from '@angular/material';
+
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireDatabase, AngularFireDatabaseModule } from '@angular/fire/database';
 
-
+import { HomeComponent  } from './home/home.component';
+import { HomeModule } from './home/home.module';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { AfficheResultComponent } from './affiche-result/affiche-result.component';
@@ -37,6 +39,10 @@ import { ConnecterComponent } from './connecter/connecter.component';
 import { AfficheetudComponent } from './afficheetud/afficheetud.component';
 import { InscrireComponent } from './inscrire/inscrire.component';
 import { FormationComponent } from './formation/formation.component';
+import {MatTooltipModule} from '@angular/material/tooltip';
+
+import {NgbDropdownModule,NgbModule} from '@ng-bootstrap/ng-bootstrap'
+
 
 
 @NgModule({
@@ -54,6 +60,9 @@ import { FormationComponent } from './formation/formation.component';
     AngularFirestoreModule,
     AngularFireAuthModule, 
     AngularFireStorageModule, 
+    NgbDropdownModule,
+    NgbModule,
+  
     DragAndDropModule,
     Angulartics2Module.forRoot({
       developerMode: !environment.production
@@ -95,6 +104,11 @@ import { FormationComponent } from './formation/formation.component';
                path:'afficheResultat',
                component:AfficheetudComponent,
                data:{label:'afficheResultat'}
+             },
+             {
+               path : 'formation',
+               component : FormationComponent,
+               data:{label:'FormationComponent'}
              }
       ],    
        {
@@ -102,7 +116,11 @@ import { FormationComponent } from './formation/formation.component';
       }  
       )
   ],
-  bootstrap: [DemoAppComponent]
+  exports: [
+    MatTooltipModule,
+    MatNativeDateModule
+  ],
+  bootstrap: [DemoAppComponent,HomeComponent]
 })   
 export class DemoAppModule {}        
       

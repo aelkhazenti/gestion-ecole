@@ -103,6 +103,9 @@ afficheResu(){
   this.router.navigate(['/afficheResultat'])
 }
 
+afficheFormation(){
+  this.router.navigate(['formation'])
+}
 
 
   logout(){
@@ -111,7 +114,13 @@ afficheResu(){
     
   }
   
+  
+  
+      
 
+  
+  
+  
   @ViewChild('modalContent', { static: true }) modalContent: TemplateRef<any>;
 
   view: CalendarView = CalendarView.Month;

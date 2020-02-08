@@ -36,6 +36,10 @@ login(){
 afficheResu(){
   this.router.navigate(['/afficheResultat'])
 }
+
+afficheFormation(){
+  this.router.navigate(['formation'])
+}
   ngOnInit() {
   }
 
