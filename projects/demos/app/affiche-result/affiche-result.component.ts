@@ -217,7 +217,19 @@ this.etudlist.update(this.data.key,{
   industri:this.data.industri,
   architecture:this.data.architecture,
 })
+swal.fire({
+  position: 'top-end',
+  icon: 'success',
+  title: 'Your work has been saved',
+  showConfirmButton: false,
+  timer: 1000
+})
+
   this.etudArra = []
+
+
+
+  
 }
 
 validS2(){
@@ -251,6 +263,17 @@ this.etudlist.update(this.data.key,{
   algebre2:  this.data. algebre2,
 
 })
+
+
+
+swal.fire({
+  position: 'top-end',
+  icon: 'success',
+  title: 'Your work has been saved',
+  showConfirmButton: false,
+  timer: 1000
+})
+
 this.etudArra = []
 }
 
@@ -278,8 +301,20 @@ this.etudlist.update(this.data.key,{
   reseauxAVS:this.data.reseauxAVS
 
 })
+
+swal.fire({
+  position: 'top-end',
+  icon: 'success',
+  title: 'Your work has been saved',
+  showConfirmButton: false,
+  timer: 1000
+})
+
+
 this.etudArra = []
 }
+
+
 
 }
 

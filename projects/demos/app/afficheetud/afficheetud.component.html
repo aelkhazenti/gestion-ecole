@@ -49,7 +49,7 @@
             <th>Spécialité</th>
             <th>Niveaux</th>
             <th>Affiche</th>
-            <!-- <th>supprimer</th> -->
+            <th>telecharger</th>
             
 
         </tr>
@@ -64,7 +64,7 @@
             <td>{{item.niveaux}}</td>
       
             <td><button (click)="editforms1(item.$key)" class="uk-button uk-button-default" (click)="openS1(contS1)" (click)="openS2(contS2)" (click)="openS3(contS3)"  (click)="editforms1(item.$key)" >affiche</button></td>
-            <!-- <td><button class="uk-button uk-button-danger" (click)="supri(item.$key)">supprimer</button></td> -->
+            <td><button class="uk-button uk-button-danger" (click)="show(item.cne,item.nom)">telecharger</button></td>
            
            
            

@@ -205,7 +205,7 @@ etudList :AngularFireList<any>;
     doc.text(50, 130, ' ' + this.data.dateN + ' à ' + this.data.lieu)
 
 
-    // doc.save('recu dinscription.pdf')
+    doc.save('recu dinscription.pdf')
   }
 
 }
