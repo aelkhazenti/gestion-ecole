@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule  } from '@angular/router';
+import { RouterModule, Routes  } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
@@ -15,16 +15,32 @@ import { DemoAppComponent } from './demo-app.component';
 import { HomeComponent  } from './home/home.component';
 import { HomeModule } from './home/home.module';
 
+import { InscrireComponent } from './inscrire/inscrire.component';
+
+import { AngularFireModule } from '@angular/fire';
+
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+
+import { AngularFireDatabase, AngularFireDatabaseModule } from '@angular/fire/database';
+
 import { DemoComponent as DefaultDemoComponent } from './demo-modules/kitchen-sink/component';
 import { DemoModule as DefaultDemoModule } from './demo-modules/kitchen-sink/module';
 
 import { environment } from '../environments/environment';
 import { FormsModule } from '@angular/forms';
 import { ClipboardModule } from 'ngx-clipboard';
+import { NavbarComponent } from './navbar/navbar.component';
+import { AfficheResultComponent } from './affiche-result/affiche-result.component';
+import { ConnecterComponent } from './connecter/connecter.component';
+import { AfficheetudComponent } from './afficheetud/afficheetud.component';
+
+
 
 
 @NgModule({
-  declarations: [DemoAppComponent],
+  declarations: [DemoAppComponent, InscrireComponent, NavbarComponent, AfficheResultComponent, ConnecterComponent, AfficheetudComponent,],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -32,6 +48,11 @@ import { ClipboardModule } from 'ngx-clipboard';
     NgbTabsetModule,
     NgbCollapseModule,
     NgbTooltipModule,
+    AngularFireModule.initializeApp(environment.firebase), 
+    AngularFireDatabaseModule,
+    AngularFirestoreModule,
+    AngularFireAuthModule, 
+    AngularFireStorageModule, 
     DragAndDropModule,
     Angulartics2Module.forRoot({
       developerMode: !environment.production
@@ -53,10 +74,33 @@ import { ClipboardModule } from 'ngx-clipboard';
             data: {label: 'home'}
             },
             { path: '' ,redirectTo:'home' ,pathMatch:'full' },
+{
+  path:'inscrire',
+  component:InscrireComponent,
+  data : { label: 'inscrire'}
+},
+
+ {
+   path:'resultat',
+   component:AfficheResultComponent,
+   data:{ label:'resultat' }
+ },  
+ {
+   path:'login',
+   component:ConnecterComponent,
+   data:{ label:'login'}
+ },
+ {
+   path:'afficheResultat',
+   component:AfficheetudComponent,
+   data:{label:'afficheResultat'}
+ }
+ 
       ],    
        {
         useHash: true
       }  
+      
       )
   ],
   bootstrap: [DemoAppComponent]
