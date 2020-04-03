@@ -205,7 +205,11 @@ etudList :AngularFireList<any>;
     doc.text(50, 130, ' ' + this.data.dateN + ' à ' + this.data.lieu)
 
 
+<<<<<<< HEAD
     // doc.save('recu dinscription.pdf')
+=======
+    doc.save('recu dinscription.pdf')
+>>>>>>> 7103e313d70ae7fe6d3e1ffc653a753bda362e1c
   }
 
 }

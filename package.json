@@ -87,10 +87,19 @@
     "@commitlint/config-conventional": "^8.2.0",
     "@commitlint/prompt": "^8.2.0",
     "@compodoc/compodoc": "^1.1.11",
+<<<<<<< HEAD
     "@ng-bootstrap/ng-bootstrap": "^5.1.4",
     "@schematics/angular": "^8.3.19",
     "@stackblitz/sdk": "^1.3.0",
     "@types/chai": "^4.2.5",
+=======
+    "@ng-bootstrap/ng-bootstrap": "^5.2.1",
+    "@schematics/angular": "^8.3.19",
+    "@stackblitz/sdk": "^1.3.0",
+    "@types/chai": "^4.2.5",
+    "@types/jquery": "^3.3.31",
+    "@types/jspdf": "^1.3.3",
+>>>>>>> 7103e313d70ae7fe6d3e1ffc653a753bda362e1c
     "@types/mocha": "^5.2.7",
     "@types/moment-timezone": "^0.5.12",
     "@types/node": "^12.12.11",
@@ -156,6 +165,7 @@
   },
   "dependencies": {
     "@angular/fire": "^5.4.0",
+<<<<<<< HEAD
     "angular-draggable-droppable": "^4.3.8",
     "angular-resizable-element": "^3.2.6",
     "calendar-utils": "^0.7.0",
@@ -163,6 +173,21 @@
     "jspdf": "^1.5.3",
     "positioning": "^2.0.0",
     "sweetalert": "^2.1.2",
+=======
+    "@angular/material": "^8.2.3",
+    "alerts": "^0.1.3",
+    "angular-alert-module": "^2.0.3",
+    "angular-draggable-droppable": "^4.3.8",
+    "angular-resizable-element": "^3.2.6",
+    "angular-screenshot": "^0.4.1",
+    "bootstrap": "^4.4.1",
+    "calendar-utils": "^0.7.0",
+    "firebase": "^7.8.0",
+    "html2canvas": "^1.0.0-rc.5",
+    "jquery": "^3.4.1",
+    "jspdf": "^1.5.3",
+    "positioning": "^2.0.0",
+>>>>>>> 7103e313d70ae7fe6d3e1ffc653a753bda362e1c
     "sweetalert2": "^9.7.1"
   },
   "sideEffects": [

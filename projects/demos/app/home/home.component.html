@@ -5,7 +5,16 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<<<<<<< HEAD
 
+=======
+<!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/css/uikit.min.css" />
+
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit-icons.min.js"></script>
+>>>>>>> 7103e313d70ae7fe6d3e1ffc653a753bda362e1c
 <style>
 
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
@@ -26,6 +35,10 @@ body, html {
 .w3-bar .w3-button {
   padding: 16px;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7103e313d70ae7fe6d3e1ffc653a753bda362e1c
 </style>
 <body>
 
@@ -36,9 +49,14 @@ body, html {
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
       <a href="" class="w3-bar-item w3-button"><i class="fa fa-home" aria-hidden="true"></i> accueil</a>
+<<<<<<< HEAD
       <a href="" class="w3-bar-item w3-button"><i class="fa fa-bandcamp"></i>  afficher calendrier  </a>
       <a *ngIf="isloged" (click)="calendar()" class="w3-bar-item w3-button"><i class="fa fa-bandcamp"></i> calendrier </a>
 
+=======
+      <a (click)="afficheFormation()" class="w3-bar-item w3-button"><i class="fa fa-bandcamp"></i>  afficher calendrier  </a>
+      <a *ngIf="isloged" (click)="calendar()" class="w3-bar-item w3-button"><i class="fa fa-bandcamp"></i> calendrier </a>
+>>>>>>> 7103e313d70ae7fe6d3e1ffc653a753bda362e1c
      <a *ngIf="isloged" (click)="resultat()" class="w3-bar-item w3-button" ><i class="fa fa-eye" aria-hidden="true"  ></i> afficher les resultats</a> 
      <a *ngIf="!isloged" (click)="afficheResu()" class="w3-bar-item w3-button" ><i class="fa fa-eye" aria-hidden="true"  ></i> afficher les resultats</a> 
       <a (click)="inscrire()" class="w3-bar-item w3-button"><i class="fa fa-usd"  ></i> S'inscrire</a>
@@ -65,12 +83,55 @@ body, html {
 
 
 <!-- Header with full-height image -->
+<<<<<<< HEAD
 <!-- <header id="page-header" class="site-header site-page-header site-page-header-normal site-page-header-recherche site-page-header-image" style="image:url(https://iutp.univ-poitiers.fr/wp-content/uploads/sites/100/2019/04/xIMG_1085-2.jpg.pagespeed.ic.1-sbfbVV-f.webp);background-position:center center"> -->
 
 
   <br>
 <img src="https://iutp.univ-poitiers.fr/wp-content/uploads/sites/100/2019/04/xIMG_1085-2.jpg.pagespeed.ic.1-sbfbVV-f.webp" alt="home page" style="padding: 5px; height: 500px;width: 100%; " >
 <!-- 
+=======
+
+<div class="container">
+        <div class="carousel">
+            <input type="radio" id="carousel-1" name="carousel[]" checked>
+            <input type="radio" id="carousel-2" name="carousel[]">
+         <input type="radio" id="carousel-3" name="carousel[]">
+            <input type="radio" id="carousel-4" name="carousel[]">
+            <input type="radio" id="carousel-5" name="carousel[]">
+            <ul class="carousel__items">
+
+                <li class="carousel__item"><img src="../../assets/univer1.jpg" alt=""></li>
+                <li class="carousel__item"><img src="../../assets/univer2.jpg" alt=""></li>
+                <li class="carousel__item"><img src="//lh5.googleusercontent.com/-batEXUZE_e4/U8-EmLF9-hI/AAAAAAAABc0/J3tJVUa6Buk/w1358-h905-no/carousel-3.jpg" alt=""></li>
+                <li class="carousel__item"><img src="//lh5.googleusercontent.com/-gywqIeMvel0/U8-EolKdtkI/AAAAAAAABdM/G0-NHuvvJUU/w1358-h905-no/carousel-4.jpg" alt=""></li>
+                <li class="carousel__item"><img src="//lh5.googleusercontent.com/--2iANjL3ikc/U8-EoGJ18mI/AAAAAAAABdI/fBe-q3Gos6Y/w1358-h905-no/carousel-5.jpg" alt=""></li>
+            </ul>
+         <div class="carousel__prev">
+             <label for="carousel-1"></label>
+             <label for="carousel-2"></label>
+             <label for="carousel-3"></label>
+             <label for="carousel-4"></label>
+             <label for="carousel-5"></label>
+         </div>
+         <div class="carousel__next">
+           <label for="carousel-1"></label>
+           <label for="carousel-2"></label>
+           <label for="carousel-3"></label>
+           <label for="carousel-4"></label>
+           <label for="carousel-5"></label>
+         </div>
+         <div class="carousel__nav">
+           <label for="carousel-1"></label>
+           <label for="carousel-2"></label>
+           <label for="carousel-3"></label>
+           <label for="carousel-4"></label>
+           <label for="carousel-5"></label>
+         </div>
+       </div>
+     </div>
+
+>>>>>>> 7103e313d70ae7fe6d3e1ffc653a753bda362e1c
 <div class="w3-container" style="padding:128px 16px" id="about">
 
   <p class="w3-center w3-large">Key features of our company</p>
@@ -96,7 +157,11 @@ body, html {
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
     </div>
   </div>
+<<<<<<< HEAD
 </div> -->
+=======
+</div>
+>>>>>>> 7103e313d70ae7fe6d3e1ffc653a753bda362e1c
 
 <!-- Promo Section - "We know design" -->
 <div class="w3-container w3-light-grey" style="padding:128px 16px">
@@ -135,7 +200,11 @@ body, html {
           <h3>M. Saidi  </h3>
           <p class="w3-opacity">M. Saidi</p>
           <p>test test</p>
+<<<<<<< HEAD
           <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+=======
+          <p><button class="w3-button w3-light-grey w3-block" mat-raised-button matTooltip="helloworld" ><i class="fa fa-envelope"></i> Contact</button></p>
+>>>>>>> 7103e313d70ae7fe6d3e1ffc653a753bda362e1c
         </div>
       </div>
     </div>
@@ -146,6 +215,10 @@ body, html {
           <h3>M. baddi</h3>
           <p class="w3-opacity">M. baddi</p>
           <p>test</p>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 7103e313d70ae7fe6d3e1ffc653a753bda362e1c
           <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
         </div>
       </div>
@@ -157,13 +230,19 @@ body, html {
           <h3>M. Toumi</h3>
           <p class="w3-opacity">M. Toumi</p>
           <p>test test</p>
+<<<<<<< HEAD
           <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+=======
+          <p><button class="w3-button w3-light-grey w3-block" uk-tooltip="title: Hello World; pos: bottom" ><i class="fa fa-envelope"></i> Contact</button></p>
+          
+>>>>>>> 7103e313d70ae7fe6d3e1ffc653a753bda362e1c
         </div>
       </div>
     </div>
   </div>
 </div>
 
+<<<<<<< HEAD
 <!-- Promo Section "Statistics" -->
 
 
@@ -226,6 +305,8 @@ body, html {
   </div>
 </div> -->
 
+=======
+>>>>>>> 7103e313d70ae7fe6d3e1ffc653a753bda362e1c
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
   <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
@@ -264,6 +345,7 @@ body, html {
 
 
 <!-- Pricing Section -->
+<<<<<<< HEAD
 <div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px" id="pricing">
   <h3>PRICING</h3>
   <p class="w3-large">Choose a pricing plan that fits your needs.</p>
@@ -274,6 +356,11 @@ body, html {
 <div class="w3-container w3-light-grey" style="padding:40px 6px" id="contact">
   <h3 class="w3-center">CONTACTTT</h3>
   <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+=======
+<div class="w3-container w3-center w3-dark-grey" style="padding:45px 16px" id="pricing">
+  <h3 class="w3-center">contactez nous</h3>
+  <p class="w3-center w3-large">Permet d'entrer en contact. Envoie-nous un message</p>
+>>>>>>> 7103e313d70ae7fe6d3e1ffc653a753bda362e1c
   <div style="margin-top:8px">
     <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> El Jadida</p>
     <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +212 .......</p>
@@ -283,6 +370,7 @@ body, html {
   </div>
 </div>
 
+<<<<<<< HEAD
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64">
   <a href="/home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
@@ -290,6 +378,19 @@ body, html {
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
     <i class="fa fa-instagram w3-hover-opacity"></i>
     <i class="fa fa-snapchat w3-hover-opacity"></i>
+=======
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:2px" id="contact">
+
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  
+>>>>>>> 7103e313d70ae7fe6d3e1ffc653a753bda362e1c
     <i class="fa fa-pinterest-p w3-hover-opacity"></i>
     <i class="fa fa-twitter w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>

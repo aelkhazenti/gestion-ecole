@@ -34,6 +34,7 @@ MIT
 @angular/core
 MIT
 
+<<<<<<< HEAD
 @angular/fire
 MIT
 
@@ -45,6 +46,8 @@ MIT
 
 @angular/fire/storage
 
+=======
+>>>>>>> 7103e313d70ae7fe6d3e1ffc653a753bda362e1c
 @angular/forms
 MIT
 
@@ -54,6 +57,7 @@ MIT
 @angular/router
 MIT
 
+<<<<<<< HEAD
 @firebase/app
 Apache-2.0
 
@@ -284,6 +288,8 @@ Apache-2.0
 @firebase/webchannel-wrapper
 Apache-2.0
 
+=======
+>>>>>>> 7103e313d70ae7fe6d3e1ffc653a753bda362e1c
 @ng-bootstrap/ng-bootstrap
 MIT
 The MIT License (MIT)
@@ -598,6 +604,7 @@ WTFPL
 
 
 
+<<<<<<< HEAD
 firebase/app
 
 firebase/auth
@@ -608,6 +615,8 @@ firebase/firestore
 
 firebase/storage
 
+=======
+>>>>>>> 7103e313d70ae7fe6d3e1ffc653a753bda362e1c
 flatpickr
 MIT
 The MIT License (MIT)
@@ -661,9 +670,12 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
+<<<<<<< HEAD
 jspdf
 MIT
 
+=======
+>>>>>>> 7103e313d70ae7fe6d3e1ffc653a753bda362e1c
 ngx-clipboard
 MIT
 
@@ -999,6 +1011,7 @@ Apache-2.0
  
 
 
+<<<<<<< HEAD
 sweetalert2
 MIT
 The MIT License (MIT)
@@ -1025,6 +1038,8 @@ SOFTWARE.
 
 
 
+=======
+>>>>>>> 7103e313d70ae7fe6d3e1ffc653a753bda362e1c
 tslib
 Apache-2.0
 Apache License

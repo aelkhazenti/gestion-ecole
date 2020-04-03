@@ -38,7 +38,11 @@ body, html {
     <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
       <a href="" class="w3-bar-item w3-button"><i class="fa fa-home" aria-hidden="true"></i> accueil</a>
+<<<<<<< HEAD
       <a href="" class="w3-bar-item w3-button"><i class="fa fa-bandcamp"></i>  afficher calendrier  </a>
+=======
+      <a (click)="afficheFormation()" class="w3-bar-item w3-button"><i class="fa fa-bandcamp"></i>  afficher calendrier  </a>
+>>>>>>> 7103e313d70ae7fe6d3e1ffc653a753bda362e1c
       <a *ngIf="isloged" (click)="calendar()" class="w3-bar-item w3-button"><i class="fa fa-bandcamp"></i> calendrier </a>
 
      <a *ngIf="isloged" (click)="resultat()" class="w3-bar-item w3-button" ><i class="fa fa-eye" aria-hidden="true"  ></i> afficher les resultats</a> 

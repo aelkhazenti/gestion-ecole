@@ -50,7 +50,19 @@
             "styles": [
               "projects/demos/styles.scss"
             ],
+<<<<<<< HEAD
             "scripts": []
+=======
+            "scripts": [	
+				"projects/demos/assets/firebase-database.js",
+				"projects/demos/assets/sweetalert.js",
+				"projects/demos/assets/firebase-auth.js",
+				"projects/demos/assets/firebase-storage.js",
+				"projects/demos/assets/firebase-app.js",
+				"projects/demos/assets/html2canvas.min.js",
+				 "projects/demos/assets/myjs.js",
+				"node_modules/jquery/dist/jquery.min.js",]
+>>>>>>> 7103e313d70ae7fe6d3e1ffc653a753bda362e1c
           },
           "configurations": {
             "production": {

@@ -217,7 +217,23 @@ this.etudlist.update(this.data.key,{
   industri:this.data.industri,
   architecture:this.data.architecture,
 })
+<<<<<<< HEAD
   this.etudArra = []
+=======
+swal.fire({
+  position: 'top-end',
+  icon: 'success',
+  title: 'Your work has been saved',
+  showConfirmButton: false,
+  timer: 1000
+})
+
+  this.etudArra = []
+
+
+
+  
+>>>>>>> 7103e313d70ae7fe6d3e1ffc653a753bda362e1c
 }
 
 validS2(){
@@ -251,6 +267,20 @@ this.etudlist.update(this.data.key,{
   algebre2:  this.data. algebre2,
 
 })
+<<<<<<< HEAD
+=======
+
+
+
+swal.fire({
+  position: 'top-end',
+  icon: 'success',
+  title: 'Your work has been saved',
+  showConfirmButton: false,
+  timer: 1000
+})
+
+>>>>>>> 7103e313d70ae7fe6d3e1ffc653a753bda362e1c
 this.etudArra = []
 }
 
@@ -278,9 +308,27 @@ this.etudlist.update(this.data.key,{
   reseauxAVS:this.data.reseauxAVS
 
 })
+<<<<<<< HEAD
 this.etudArra = []
 }
 
+=======
+
+swal.fire({
+  position: 'top-end',
+  icon: 'success',
+  title: 'Your work has been saved',
+  showConfirmButton: false,
+  timer: 1000
+})
+
+
+this.etudArra = []
+}
+
+
+
+>>>>>>> 7103e313d70ae7fe6d3e1ffc653a753bda362e1c
 }
 
 

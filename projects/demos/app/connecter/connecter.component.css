@@ -22,7 +22,11 @@ form {
     margin: 8px 0;
     border: none;
     cursor: pointer;
+<<<<<<< HEAD
     width: 100%;
+=======
+    width: 10%;
+>>>>>>> 7103e313d70ae7fe6d3e1ffc653a753bda362e1c
   }
   
   /* Add a hover effect for buttons */
